@@ -14,22 +14,22 @@ package stephencrypt
 
 //const KEY = `STEPHEN`
 
-func StephenCrypt(clearText string, shift int32) string {
+func StephenCrypt(clearText string) string {
 	var result string
 	//var keyIndex int
 	//for i, v := range clearText {
 	for _, v := range clearText {
 		//keyIndex = i % len(KEY)
 		//result = result + string(v + int32(KEY[keyIndex]))
-		result = result + string(v + shift)
+		result = result + string(v + 1)
 	}
 	return result
 }
 
-func StephenDecrypt(cipherText string, shift int32) string {
+func StephenDecrypt(cipherText string) string {
 	var result string
 	for _, v := range cipherText {
-		result = result + string(v - shift)
+		result = result + string(v - 1)
 	}
 	return result
 }
