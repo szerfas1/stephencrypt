@@ -1,3 +1,3 @@
-module github.com/szerfas1/stephencrypt2/v4.0.0
+module github.com/szerfas1/stephencrypt2/v5
 
 go 1.15
